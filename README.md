@@ -1,65 +1,88 @@
-# KAIROS – Inteligência Artificial para Decisões no Momento Certo
+<div align="center">
 
-**KAIROS** é um sistema de inteligência artificial desenvolvido para analisar dados em tempo real e auxiliar na tomada de decisões estratégicas, identificando o momento mais oportuno para cada acção. Inspirado no conceito grego de *kairos* — o tempo qualitativo — esta IA é ideal para contextos que exigem precisão, visão preditiva e acção consciente.
+# 🧠 Spin
 
-> **Lançamento:** Este é um produto em desenvolvimento da **Huta Dev**.
+**Inteligência Artificial Modular da Huta Dev**
 
----
+Spin é uma plataforma de inteligência artificial de código aberto que combina modelos avançados de linguagem, automação inteligente e integração com sistemas modernos. Concebida para ser flexível, escalável e ética, Spin visa transformar a relação entre humanos e máquinas com interacções contextuais e precisas.
 
-## Funcionalidades Principais
+[![Licença MIT](https://img.shields.io/badge/Licença-MIT-blue.svg)](#-licença)
+[![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow.svg)](#-estado-do-desenvolvimento)
+[![Huta Dev](https://img.shields.io/badge/feito%20por-Huta%20Dev-0d1117)](https://github.com/heliocarlitos)
 
-- **Análise Preditiva de Dados:** Identifica padrões e antecipa oportunidades.
-- **Gestão Inteligente de Tempo e Recursos:** Sugere o momento ideal para cada tarefa ou decisão.
-- **Alertas Estratégicos:** Notifica acções críticas com base em contextos e tendências.
-- **Adaptação ao Utilizador:** Personalização contínua com base no comportamento e nas preferências.
-- **Integração com Sistemas e APIs Externas:** Calendários, sensores, plataformas de produtividade, entre outros.
+</div>
 
 ---
 
-## Casos de Utilização
+## ✨ Visão Geral
 
-- Assistente de decisões para executivos e gestores
-- Plataforma de apoio à aprendizagem personalizada
-- Otimização de fluxos operacionais e processos internos
-- Gestão preditiva de bem-estar e saúde
+Spin é uma IA de nova geração, desenvolvida para interagir, aprender e adaptar-se de forma contínua. Concebida pela **Huta Dev**, oferece uma base sólida para aplicações que exigem compreensão semântica, resposta inteligente e acção automatizada.
 
 ---
 
-## Tecnologias Utilizadas
+## ⚙️ Funcionalidades Principais
 
-- **Linguagens:** Python, JavaScript (Node.js)
-- **IA/ML:** TensorFlow, PyTorch
-- **Base de Dados:** Firebase, PostgreSQL
-- **Interface:** React.js / Next.js
-- **Integrações:** Google Calendar API, dispositivos IoT, serviços REST
-
----
-
-## Objectivo
-
-Capacitar indivíduos e organizações a **agir no momento certo**, com base em dados fiáveis, previsões inteligentes e contexto personalizado.
+- **Compreensão de linguagem natural** (PT/EN)
+- **Respostas contextualizadas e dinâmicas**
+- **Arquitectura modular e escalável**
+- **Integração com APIs externas**
+- **Memória temporária e contextual**
+- **Suporte para personalização de personalidade**
 
 ---
 
-## Estado do Projecto
+## 🛠️ Tecnologias
 
-**Em fase inicial de lançamento (Alpha)**  
-Desenvolvido e mantido por **Huta Dev**.  
-Novas funcionalidades serão adicionadas continuamente nas próximas versões.
-
----
-
-## Contribuições
-
-Contribuições são bem-vindas!  
-Por favor, abra um *issue* ou submeta um *pull request* com melhorias, correcções ou sugestões.
+| Tecnologia     | Finalidade                         |
+|----------------|------------------------------------|
+| React + Vite   | Interface moderna e veloz          |
+| Node.js        | Backend e lógica de serviços       |
+| Firebase       | Autenticação e base de dados       |
+| OpenAI API     | Geração e compreensão de linguagem |
+| TailwindCSS    | Estilização responsiva             |
+| TS             | Futuramente                        |
 
 ---
 
-## Licença
+## 🚀 Início Rápido
 
-Este projecto está licenciado sob a [MIT License](LICENSE).
+> Requisitos: `Node.js` (v18+), `npm`
+
+```bash
+# 1. Clonar o repositório
+git clone https://github.com/heliocarlitos/spin.git
+cd spin
+
+# 2. Instalar dependências
+npm install
+
+# 3. Outras dependências
+npm install react-icons react-router-dom react-helmet
+
+# 4. Iniciar o ambiente de desenvolvimento
+npm run dev
+````
 
 ---
 
-**© 2025 Huta Dev**
+## 📈 Estado do Desenvolvimento
+
+* [x] Definição do nome e identidade do projecto
+* [x] Criação da base React com Vite
+* [ ] Ligação à API de IA
+* [ ] Módulo de personalização de comportamento
+* [ ] Integração com base de dados e autenticação
+* [ ] Deployment (Vercel/Render)
+
+---
+
+## 🧑‍💻 Contribuição
+
+Contribuições são bem-vindas! Por favor, leia as [directrizes de contribuição](CONTRIBUTING.md) (a criar) antes de submeter um *pull request*.
+
+---
+
+<div align="center">
+Feito com dedicação por <strong>Huta Dev</strong> ⚡
+</div>
+```
