@@ -1,10 +1,10 @@
 <div align="center">
 
-# 🧠 Spin
+# 🧠 siso
 
 **Inteligência Artificial Modular da Huta Dev**
 
-Spin é uma plataforma de inteligência artificial de código aberto que combina modelos avançados de linguagem, automação inteligente e integração com sistemas modernos. Concebida para ser flexível, escalável e ética, Spin visa transformar a relação entre humanos e máquinas com interacções contextuais e precisas.
+siso é uma plataforma de inteligência artificial de código aberto que combina modelos avançados de linguagem, automação inteligente e integração com sistemas modernos. Concebida para ser flexível, escalável e ética, siso visa transformar a relação entre humanos e máquinas com interacções contextuais e precisas.
 
 [![Licença MIT](https://img.shields.io/badge/Licença-MIT-blue.svg)](#-licença)
 [![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow.svg)](#-estado-do-desenvolvimento)
@@ -16,7 +16,7 @@ Spin é uma plataforma de inteligência artificial de código aberto que combina
 
 ## ✨ Visão Geral
 
-Spin é uma IA de nova geração, desenvolvida para interagir, aprender e adaptar-se de forma contínua. Concebida pela **Huta Dev**, oferece uma base sólida para aplicações que exigem compreensão semântica, resposta inteligente e acção automatizada.
+siso é uma IA de nova geração, desenvolvida para interagir, aprender e adaptar-se de forma contínua. Concebida pela **Huta Dev**, oferece uma base sólida para aplicações que exigem compreensão semântica, resposta inteligente e acção automatizada.
 
 ---
 
@@ -50,8 +50,8 @@ Spin é uma IA de nova geração, desenvolvida para interagir, aprender e adapta
 
 ```bash
 # 1. Clonar o repositório
-git clone https://github.com/heliocarlitos/spin.git
-cd spin
+git clone https://github.com/heliocarlitos/siso.git
+cd siso
 
 # 2. Instalar dependências
 npm install
