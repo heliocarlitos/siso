@@ -1,0 +1,332 @@
+.Header {
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    padding: 15px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: .3s ease-in-out;
+    /* border-bottom: var(--borda-fina); */
+}
+
+.Fundo.AddFundo {
+    background-color: #00000046;
+    width: 100%;
+    height: 100dvh;
+    position: fixed;
+    left: 0;
+    top: 65px;
+    z-index: -1;
+    cursor: url(../../assets/images/svg/close.svg), default;
+}
+
+.Header.transparente {
+    transition: .2s ease-in-out;
+    backdrop-filter: blur(5px);
+}
+
+.Header .HeaderDesk {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Header .HeaderDesk .LogoLink {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+    width: 100%;
+}
+
+.Header .HeaderDesk .LogoLink .Logo {
+    max-width: 200px;
+
+    &:hover p {
+        opacity: .8;
+    }
+}
+
+.Header .HeaderDesk .LogoLink .Logo figure {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Header .HeaderDesk .LogoLink .Logo figure img {
+    border-radius: 10px;
+}
+
+.Header .HeaderDesk .LogoLink .Logo h1 {
+    font-size: 1.1em;
+    color: var(--cor-dark-reverso);
+    text-wrap: nowrap;
+}
+
+.Header .HeaderDesk .LinkDaNav {
+    width: 100%;
+    display: none;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.Header .HeaderDesk .LinkDaNav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+    max-width: 500px;
+    gap: 15px;
+}
+
+.Header .HeaderDesk .LinkDaNav ul li a {
+    display: flex;
+    justify-content: center;
+    transition: .2s ease;
+    position: relative;
+    font-size: .9em !important;
+
+    &:hover {}
+
+    &:hover::after {
+        width: 100%;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 1px;
+        bottom: 0;
+        transform: translateY(-2px);
+        z-index: -1;
+        transition: .2s ease;
+    }
+}
+
+.Header .HeaderDesk .Btn {
+    width: 100%;
+    max-width: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.Header .HeaderDesk .Btn .Accao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Header .HeaderDesk .Btn .Accao a {
+    &:hover {
+        color: var(--cor-dark-reverso);
+        text-decoration: underline;
+    }
+
+    &:last-child {
+        padding: 5px 20px;
+        border-radius: 100px;
+        background-color: var(--cor-dark-reverso);
+        color: var(--cor-dark);
+        text-decoration: none;
+
+        &:hover {
+            background-color: var(--Btn-hover);
+        }
+    }
+}
+
+.Header .HeaderDesk .Btn .BtnTogle {
+    width: 100%;
+    max-width: 80px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.Header .HeaderDesk .Btn .BtnTogle button {
+    display: flex;
+    justify-content: center;
+    transition: .2s ease;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+
+    &::after,
+    &::before {
+        display: none !important;
+    }
+
+    & svg {
+        font-size: 1.6em;
+    }
+
+    &::after {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        transform: translateY(0);
+        font-size: 0;
+        text-align: center;
+        padding: 2px 4px;
+        border-radius: 3px;
+        opacity: 0;
+        transition: .2s ease;
+        content: "Mudar tema";
+        width: 0;
+        text-wrap: nowrap;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        opacity: 0;
+        transform: translateY(0) rotate(45deg);
+        transition: .2s ease;
+    }
+
+    &:hover::after {
+        opacity: 1;
+        transition: .2s ease;
+        transform: translateY(30px);
+        width: 73px;
+        font-size: .8em;
+    }
+
+    &:hover::before {
+        opacity: 1;
+        transform: translateY(20px) rotate(45deg);
+        width: 10px;
+        height: 10px;
+    }
+}
+
+.Header .HeaderDesk .Btn .BtnTogle .BtnTema svg {
+    &:hover {
+        color: var(--cor-dark-reverso);
+    }
+}
+
+.Header .HeaderDesk .IconMenuMobile {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    padding: 7px;
+    margin-left: 15px;
+    cursor: pointer;
+    opacity: .7;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.Header .HeaderDesk .IconMenuMobile span {
+    position: relative;
+    width: 25px;
+    height: 2px;
+    transition: .2s ease;
+    border-radius: 100px;
+    background-color: var(--cor-texto-cinza);
+}
+
+.Header .HeaderDesk .IconMenuMobile span:nth-child(2) {
+    width: 60%;
+    transform: translateX(5px);
+}
+
+.Header .HeaderDesk .IconMenuMobile span:nth-child(3) {
+    width: 0;
+    transition: 0s ease;
+}
+
+.IconMenuMobile.active span:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 7px);
+}
+
+.IconMenuMobile.active span:nth-child(2) {
+    width: 0 !important;
+}
+
+.IconMenuMobile.active span:nth-child(3) {
+    transform: rotate(-44deg) translate(5px, -9px);
+    width: 100% !important;
+    transition: .2s ease !important;
+}
+
+@media screen and (max-width: 1145px) {
+    .Header .HeaderDesk .LogoLink {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 857px) {
+    .Header .HeaderDesk .LogoLink {
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 760px) {
+
+    .Header .HeaderDesk .IconMenuMobile,
+    .Fundo.AddFundo {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .Header .HeaderDesk .IconMenuMobile {
+        display: none !important;
+    }
+
+    .Header {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .Header .HeaderDesk .LogoLink {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .Header .HeaderDesk .LinkDaNav {
+        display: none;
+    }
+
+    .Header .HeaderDesk .IconMenuMobile {
+        display: flex !important;
+    }
+
+    .Header .HeaderDesk .Btn {
+        justify-content: end;
+    }
+}
+
+@media screen and (max-width: 350px) {}
+
+@media screen and (max-width: 289px) {
+    .Header .HeaderDesk .LogoLink .Logo p {
+        display: none;
+    }
+}
+@media screen and (max-width: 276px) {
+    .Header .HeaderDesk .Btn .Accao {
+        display: none;
+    }
+}
