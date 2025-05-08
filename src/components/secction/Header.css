@@ -70,43 +70,68 @@
 
 .Header .HeaderDesk .LinkDaNav {
     width: 100%;
-    display: none;
-    justify-content: center;
+    max-width: 350px;
+    display: flex;
+    justify-content: space-between;
     gap: 10px;
     align-items: center;
 }
 
-.Header .HeaderDesk .LinkDaNav ul {
+.Header .HeaderDesk .LinkDaNav details summary {
     display: flex;
-    justify-content: space-between;
-    list-style: none;
-    width: 100%;
-    max-width: 500px;
-    gap: 15px;
+    gap: 3px;
+    align-items: center;
+    position: relative;
+
+    &:hover svg {
+        color: var(--cor-dark-reverso) !important;
+    }
 }
 
-.Header .HeaderDesk .LinkDaNav ul li a {
+.Header .HeaderDesk .LinkDaNav .MenuList {
     display: flex;
-    justify-content: center;
-    transition: .2s ease;
-    position: relative;
-    font-size: .9em !important;
+    align-items: center;
+}
 
-    &:hover {}
-
-    &:hover::after {
-        width: 100%;
+.Header .HeaderDesk .LinkDaNav li a,
+.Header .HeaderDesk .LinkDaNav details summary,
+.Header .HeaderMob .LinkDaNav details summary,
+.Header .HeaderMob .LinkDaNav .MenuList a,
+.Header .HeaderMob .LinkDaNav details .SubMenu a {
+    &:hover {
+        color: var(--cor-dark-reverso) !important;
     }
+}
 
-    &::after {
-        position: absolute;
-        content: "";
-        width: 0;
-        height: 1px;
-        bottom: 0;
-        transform: translateY(-2px);
-        z-index: -1;
-        transition: .2s ease;
+.Header .HeaderDesk .LinkDaNav details .SubMenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--cor-cinza-branco);
+    border-radius: 10px;
+    padding: 10px 0;
+    border: var(--borda-fina);
+    box-shadow: var(--sombra-3);
+    margin-top: 10px;
+}
+
+.Header .HeaderDesk .LinkDaNav details .SubMenu li {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+}
+
+.Header .HeaderDesk .LinkDaNav details .SubMenu li a {
+    font-size: .9em;
+    padding: 0 15px;
+    justify-content: left;
+    width: 100%;
+
+    &:hover {
+        background-color: var(--bg-txt);
     }
 }
 
@@ -125,7 +150,8 @@
     gap: 10px;
 }
 
-.Header .HeaderDesk .Btn .Accao a {
+.Header .HeaderDesk .Btn .Accao a,
+.Header .HeaderMob .BtnAction a {
     &:hover {
         color: var(--cor-dark-reverso);
         text-decoration: underline;
@@ -268,6 +294,91 @@
     transition: .2s ease !important;
 }
 
+.Header .HeaderMob {
+    background-color: var(--cor-cinza-branco);
+    border-bottom: var(--borda-fina);
+    box-shadow: 0 20px 20px 0 #00000011;
+    transform: translateY(60px);
+    position: absolute;
+    transition: .2s ease;
+    height: 0 !important;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+}
+
+.Header .HeaderMob.show {
+    height: auto !important;
+    padding-block: 20px;
+}
+
+.Header .HeaderMob .LinkDaNav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.Header .HeaderMob .LinkDaNav .MenuList a,
+.Header .HeaderMob .LinkDaNav details summary {
+    font-weight: 600;
+    padding-inline: 20px;
+    display: flex;
+
+    &:hover {
+        background-color: var(--bg-txt);
+    }
+}
+
+.Header .HeaderMob .LinkDaNav details summary {
+    display: flex;
+}
+
+.Header .HeaderMob .LinkDaNav details .SubMenu {
+    margin-left: 31px;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 1px;
+        background-color: var(--cor-cinza);
+        height: 100%;
+        top: 0;
+        left: -10px;
+    }
+}
+
+.Header .HeaderMob .LinkDaNav details .SubMenu li {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 10px;
+        background-color: var(--cor-cinza);
+        height: 1px;
+        left: -10px;
+    }
+}
+
+.Header .HeaderMob .LinkDaNav details .SubMenu a {
+    margin-left: 5px;
+    font-size: .9em;
+}
+
+.Header .HeaderMob .BtnAction {
+    width: 100%;
+    display: none;
+}
+
+.Header .HeaderMob .BtnAction a {
+    display: flex;
+    justify-content: center;
+    margin: 20px 20px 0 20px;
+}
+
 @media screen and (max-width: 1145px) {
     .Header .HeaderDesk .LogoLink {
         gap: 30px;
@@ -277,14 +388,6 @@
 @media screen and (max-width: 857px) {
     .Header .HeaderDesk .LogoLink {
         gap: 20px;
-    }
-}
-
-@media screen and (min-width: 760px) {
-
-    .Header .HeaderDesk .IconMenuMobile,
-    .Fundo.AddFundo {
-        display: none !important;
     }
 }
 
@@ -304,7 +407,16 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 620px) {
+
+    .Header .HeaderMob,
+    .Header .HeaderDesk .IconMenuMobile,
+    .Fundo.AddFundo {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 620px) {
     .Header .HeaderDesk .LinkDaNav {
         display: none;
     }
@@ -318,15 +430,18 @@
     }
 }
 
-@media screen and (max-width: 350px) {}
+@media screen and (max-width: 350px) {
+    .Header .HeaderDesk .Btn .Accao {
+        display: none;
+    }
+
+    .Header .HeaderMob .BtnAction {
+        display: block;
+    }
+}
 
 @media screen and (max-width: 289px) {
     .Header .HeaderDesk .LogoLink .Logo p {
-        display: none;
-    }
-}
-@media screen and (max-width: 276px) {
-    .Header .HeaderDesk .Btn .Accao {
         display: none;
     }
 }

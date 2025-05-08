@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 // import logo_png from "../../../public/logo_png.webp";
 import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import "./Header.css";
+import { FiChevronDown } from "react-icons/fi";
 
 function Header() {
     const [menuAberto, setMenuAberto] = useState(false);
@@ -70,15 +70,115 @@ function Header() {
                         </Link>
                     </div>
 
-                    <div className="LinkDaNav">
-                        <Link to="#" aria-label="Página de XXXX"> Doc </Link>
-                        <Link to="#" aria-label="Página de XXXX"> Doar </Link>
-                    </div>
+                    <ul className="LinkDaNav">
+
+                        <details name="MenuDetalhe">
+                            <summary> Recursos <div className="Icon"><FiChevronDown /></div></summary>
+                            <ul className="SubMenu">
+                                <li>
+                                    <Link to="#" aria-label="Página de XXXX">
+                                        <div className="Icon">
+
+                                        </div>
+                                        Gerador textos
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link to="#" aria-label="Página de XXXX">
+                                        <div className="Icon">
+
+                                        </div>
+                                        Gerador de Imagens
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link to="#" aria-label="Página de XXXX">
+                                        <div className="Icon">
+
+                                        </div>
+                                        Gerador de vídeos
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link to="#" aria-label="Página de XXXX">
+                                        <div className="Icon">
+
+                                        </div>
+                                        Gerador de trabalhos ciêntificos
+                                    </Link>
+                                </li>
+
+                            </ul>
+                        </details>
+
+                        <li className="MenuList">
+                            <Link to="#" aria-label="Página de XXXX"> Preços </Link>
+                        </li>
+
+                        <details name="MenuDetalhe">
+
+                            <summary> Páginas <div className="Icon"><FiChevronDown /></div></summary>
+
+                            <ul className="SubMenu">
+
+                                <li>
+                                    <Link to="#" aria-label="Página de XXXX">
+                                        Sobre nós
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link to="#" aria-label="Página de XXXX">
+                                        Tabela de preços
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link to="#" aria-label="Página de XXXX">
+                                        Grade de blog
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link to="#" aria-label="Página de XXXX">
+                                        Página de blog
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link to="#" aria-label="Página de XXXX">
+                                        Entrar
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link to="#" aria-label="Página de XXXX">
+                                        Inscrever-se
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link to="#" aria-label="Página de XXXX">
+                                        Página de erro
+                                    </Link>
+                                </li>
+
+                            </ul>
+
+                        </details>
+
+                        <li className="MenuList">
+                            <Link to="#" aria-label="Página de XXXX"> Apoiar </Link>
+                        </li>
+
+                    </ul>
 
                     <div className="Btn">
 
                         <div className="Accao">
-
                             <Link to="#" aria-label="Página de XXXX"> Entrar </Link>
                         </div>
 
@@ -108,6 +208,115 @@ function Header() {
 
             <div className={`HeaderMob ${menuAberto ? "show" : ""}`} id="HeaderMob">
 
+                <ul className="LinkDaNav">
+
+                    <details name="MenuDetalhe">
+                        <summary> Recursos <div className="Icon"><FiChevronDown /></div></summary>
+                        <ul className="SubMenu">
+                            <li>
+                                <Link to="#" aria-label="Página de XXXX">
+                                    <div className="Icon">
+
+                                    </div>
+                                    Gerador textos
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link to="#" aria-label="Página de XXXX">
+                                    <div className="Icon">
+
+                                    </div>
+                                    Gerador de Imagens
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link to="#" aria-label="Página de XXXX">
+                                    <div className="Icon">
+
+                                    </div>
+                                    Gerador de vídeos
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link to="#" aria-label="Página de XXXX">
+                                    <div className="Icon">
+
+                                    </div>
+                                    Gerador de trabalhos ciêntificos
+                                </Link>
+                            </li>
+
+                        </ul>
+                    </details>
+
+                    <li className="MenuList">
+                        <Link to="#" aria-label="Página de XXXX"> Preços </Link>
+                    </li>
+
+                    <details name="MenuDetalhe">
+
+                        <summary> Páginas <div className="Icon"><FiChevronDown /></div></summary>
+
+                        <ul className="SubMenu">
+
+                            <li>
+                                <Link to="#" aria-label="Página de XXXX">
+                                    Sobre nós
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link to="#" aria-label="Página de XXXX">
+                                    Tabela de preços
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link to="#" aria-label="Página de XXXX">
+                                    Grade de blog
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link to="#" aria-label="Página de XXXX">
+                                    Página de blog
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link to="#" aria-label="Página de XXXX">
+                                    Entrar
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link to="#" aria-label="Página de XXXX">
+                                    Inscrever-se
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link to="#" aria-label="Página de XXXX">
+                                    Página de erro
+                                </Link>
+                            </li>
+
+                        </ul>
+
+                    </details>
+
+                    <li className="MenuList">
+                        <Link to="#" aria-label="Página de XXXX"> Apoiar </Link>
+                    </li>
+
+                </ul>
+
+                <div className="BtnAction">
+                    <Link to='#' aria-label="Ver página de XXXX"> Entrar </Link>
+                </div>
 
             </div>
 
